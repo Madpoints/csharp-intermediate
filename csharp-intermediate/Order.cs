@@ -1,7 +1,10 @@
 ﻿namespace csharp_intermediate
 {
-    public class Order
+    partial class Program
     {
-        
+        public class Order
+        {
+            
+        }
     }
 }
