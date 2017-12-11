@@ -5,18 +5,28 @@ using System.Threading.Tasks;
 
 namespace csharp_intermediate
 {
-    partial class Program
+    public class Person
     {
+        private DateTime _birthdate;
 
+        public void SetBirthDate(DateTime birthdate)
+        {
+            _birthdate = birthdate;
+        }
+
+        public DateTime GetBirthdate()
+        {
+            return _birthdate;
+        }
+    }
+
+    partial class Program
+    { 
         static void Main(string[] args)
         {
-            var customer = new Customer(1);
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
-
-            customer.Promote();
-
-            Console.WriteLine(customer.Orders.Count);
+            var person = new Person();
+            person.SetBirthDate(new DateTime(1985, 12, 31));
+            Console.WriteLine(person.GetBirthdate());
         }
     }
 }
