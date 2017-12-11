@@ -10,9 +10,9 @@ namespace csharp_intermediate
     { 
         static void Main(string[] args)
         {
-            var person = new Person(new DateTime(1985, 12, 31));
-
-            Console.WriteLine(person.Age);
+            var cookie = new HttpCookie();
+            cookie["name"] = "John";
+            Console.WriteLine(cookie["name"]);
         }
     }
 }
