@@ -1,30 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace csharp_intermediate
 {
-    partial class Program
+    public class Customer
     {
-        public class Customer
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public void Promote()
         {
-            public int Id;
-            public string Name;
-            public readonly List<Order> Orders = new List<Order>();
-
-            public Customer(int id)
-            {
-                this.Id = id;
-            }
-
-            public Customer(int id, string name)
-                : this(id)
-            {
-                this.Name = name;
-            }
-
-            public void Promote()
-            {
-                // ...
-            }
+            //var rating = CalculateRating(excludeOrders: true);
+            //if (rating == 0)
+            //    Console.WriteLine("Promoted to Level 1");
+            //else
+            //    Console.WriteLine("Promoted to Level 2");
+            Console.WriteLine("Promote logic change");
         }
+
+        //protected int CalculateRating(bool excludeOrders)
+        //{
+        //    return 0;
+        //}
     }
 }

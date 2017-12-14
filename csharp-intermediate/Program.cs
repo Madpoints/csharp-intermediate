@@ -4,19 +4,21 @@ using System.Threading.Tasks;
 
 namespace csharp_intermediate
 {
+    public class GoldCustomer : Customer
+    {
+        // Calculate rating no longer exists, this class is now broken
+        public void OfferVoucher()
+        {
+            var rating = this.CalculateRating(excludeOrders: true);
+        }   
+    }
 
     partial class Program
     { 
         static void Main(string[] args)
         {
-            var dbMigrator = new DbMigrator(new Logger());
-
-            var logger = new Logger();
-            var installer = new Installer(logger);
-
-            dbMigrator.Migrate();
-
-            installer.Install();
+            var customer = new Customer();
+            customer.Promote();
         }
     }
 }
