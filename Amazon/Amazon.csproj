@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9A663C94-29C8-4783-BDAF-0F1EA8E370D6}</ProjectGuid>
+    <ProjectGuid>{AA521CEC-DBD6-4D89-96FF-561D0FDD393A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>csharp_intermediate</RootNamespace>
-    <AssemblyName>csharp-intermediate</AssemblyName>
+    <RootNamespace>Amazon</RootNamespace>
+    <AssemblyName>Amazon</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,27 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs" />
-    <Compile Include="DbMigrator.cs" />
-    <Compile Include="HttpCookie.cs" />
-    <Compile Include="Installer.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="PresentationObject.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Text.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Amazon.csproj">
-      <Project>{D2D21DF7-51B3-4847-90DF-A768804A923C}</Project>
-      <Name>Amazon</Name>
-    </ProjectReference>
+    <Compile Include="RateCalculator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
